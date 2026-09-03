@@ -1,17 +1,25 @@
 # AI Engineer Journey
 
-My hands-on learning journey toward becoming an AI Engineer.
+## Text Analyzer
 
-## Current project: Text Analyzer
+A Python command-line application that analyzes a sentence.
 
-A small Python command-line application that analyzes a sentence and reports:
+### Features
 
-- Word count
-- Character count
-- Number of question marks
-- Uppercase version of the input
+- Counts words
+- Counts characters
+- Counts question marks
+- Converts text to uppercase
+- Shows the 3 most frequent words
 
-## Run locally
+### Run Locally
 
 ```bash
 py text_analyzer.py
+```
+
+### Built With
+
+- Python 3.13
+- Git
+- GitHub
