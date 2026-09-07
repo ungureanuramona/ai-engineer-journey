@@ -20,6 +20,16 @@ def find_common_words(text):
     return Counter(words).most_common(3)
 
 
+def find_longest_word(text):
+    cleaned_text = text.lower()
+
+    for character in ".,!?":
+        cleaned_text = cleaned_text.replace(character, "")
+
+    words = cleaned_text.split()
+    return max(words, key=len)
+
+
 def main():
     text = input("Write a sentence: ")
 
@@ -29,6 +39,7 @@ def main():
 
     analysis = analyze_text(text)
     common_words = find_common_words(text)
+    longest_word = find_longest_word(text)
 
     print("\n--- Analysis ---")
     print(f"Words: {analysis['words']}")
@@ -39,6 +50,8 @@ def main():
     print("\nMost frequent words:")
     for word, count in common_words:
         print(f"- {word}: {count}")
+
+    print(f"\nLongest word: {longest_word}")
 
 
 if __name__ == "__main__":
