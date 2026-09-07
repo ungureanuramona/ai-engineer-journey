@@ -11,15 +11,9 @@ A Python command-line application that analyzes a sentence.
 - Counts question marks
 - Converts text to uppercase
 - Shows the 3 most frequent words
+- Detects the longest word
 
 ### Run Locally
 
 ```bash
 py text_analyzer.py
-```
-
-### Built With
-
-- Python 3.13
-- Git
-- GitHub
