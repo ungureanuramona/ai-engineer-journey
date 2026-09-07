@@ -30,6 +30,17 @@ def find_longest_word(text):
     return max(words, key=len)
 
 
+def count_vowels(text):
+    vowels = "aeiou"
+    vowel_count = 0
+
+    for character in text.lower():
+        if character in vowels:
+            vowel_count += 1
+
+    return vowel_count
+
+
 def main():
     text = input("Write a sentence: ")
 
@@ -40,12 +51,14 @@ def main():
     analysis = analyze_text(text)
     common_words = find_common_words(text)
     longest_word = find_longest_word(text)
+    vowel_count = count_vowels(text)
 
     print("\n--- Analysis ---")
     print(f"Words: {analysis['words']}")
     print(f"Characters: {analysis['characters']}")
     print(f"Question marks: {analysis['question_marks']}")
     print(f"Uppercase: {analysis['uppercase']}")
+    print(f"Vowels: {vowel_count}")
 
     print("\nMost frequent words:")
     for word, count in common_words:
