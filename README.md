@@ -12,6 +12,7 @@ A Python command-line application that analyzes a sentence.
 - Converts text to uppercase
 - Shows the 3 most frequent words
 - Detects the longest word
+- Counts vowels
 
 ### Run Locally
 
