@@ -1,6 +1,15 @@
 from collections import Counter
 
 
+def normalize_text(text):
+    cleaned_text = text.lower()
+
+    for character in ".,!?":
+        cleaned_text = cleaned_text.replace(character, "")
+
+    return cleaned_text
+
+
 def analyze_text(text):
     return {
         "words": len(text.split()),
@@ -11,22 +20,12 @@ def analyze_text(text):
 
 
 def find_common_words(text):
-    cleaned_text = text.lower()
-
-    for character in ".,!?":
-        cleaned_text = cleaned_text.replace(character, "")
-
-    words = cleaned_text.split()
+    words = normalize_text(text).split()
     return Counter(words).most_common(3)
 
 
 def find_longest_word(text):
-    cleaned_text = text.lower()
-
-    for character in ".,!?":
-        cleaned_text = cleaned_text.replace(character, "")
-
-    words = cleaned_text.split()
+    words = normalize_text(text).split()
     return max(words, key=len)
 
 
